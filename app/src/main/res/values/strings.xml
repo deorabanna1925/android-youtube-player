@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">android-youtube-player</string>
+    <string name="app_name">YouTube Player</string>
+    <string name="youtube_url">Youtube Url</string>
+    <string name="open_video">Play</string>
 </resources>
