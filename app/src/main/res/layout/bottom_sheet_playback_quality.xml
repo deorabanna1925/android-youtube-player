@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#e6e6e6"
+    android:paddingBottom="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="10dp"
+                android:text="Playback Quality"
+                android:textColor="@android:color/black"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:background="?attr/selectableItemBackground"
+                android:id="@+id/close_bottom_sheet2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:padding="10dp"
+                android:src="@drawable/ic_baseline_close_24" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/playback_quality_2160"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:textColor="#3c3c3c"
+                android:drawablePadding="10dp"
+                android:gravity="center_vertical"
+                android:background="?attr/selectableItemBackground"
+                android:text="2160 (4K)" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#e6e6e6" />
+
+            <TextView
+                android:id="@+id/playback_quality_1440"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:textColor="#3c3c3c"
+                android:drawablePadding="10dp"
+                android:gravity="center_vertical"
+                android:background="?attr/selectableItemBackground"
+                android:text="1440 (2K)" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#e6e6e6" />
+
+            <TextView
+                android:id="@+id/playback_quality_1080"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:textColor="#3c3c3c"
+                android:drawablePadding="10dp"
+                android:gravity="center_vertical"
+                android:background="?attr/selectableItemBackground"
+                android:text="1080" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#e6e6e6" />
+
+            <TextView
+                android:id="@+id/playback_quality_720"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:textColor="#3c3c3c"
+                android:drawablePadding="10dp"
+                android:gravity="center_vertical"
+                android:background="?attr/selectableItemBackground"
+                android:text="720" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#e6e6e6" />
+
+            <TextView
+                android:id="@+id/playback_quality_480"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:textColor="#3c3c3c"
+                android:drawablePadding="10dp"
+                android:gravity="center_vertical"
+                android:background="?attr/selectableItemBackground"
+                android:text="480" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#e6e6e6" />
+
+            <TextView
+                android:id="@+id/playback_quality_360"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:textColor="#3c3c3c"
+                android:drawablePadding="10dp"
+                android:gravity="center_vertical"
+                android:background="?attr/selectableItemBackground"
+                android:text="360" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#e6e6e6" />
+
+            <TextView
+                android:id="@+id/playback_quality_240"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:textColor="#3c3c3c"
+                android:drawablePadding="10dp"
+                android:gravity="center_vertical"
+                android:background="?attr/selectableItemBackground"
+                android:text="240" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#e6e6e6" />
+
+            <TextView
+                android:id="@+id/playback_quality_144"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:textColor="#3c3c3c"
+                android:drawablePadding="10dp"
+                android:gravity="center_vertical"
+                android:background="?attr/selectableItemBackground"
+                android:text="144" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

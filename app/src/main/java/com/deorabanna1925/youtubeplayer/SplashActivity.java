@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.os.Handler;
 
 import com.deorabanna1925.youtubeplayer.activity.MainActivity;
-import com.deorabanna1925.youtubeplayer.databinding.ActivitySplashBinding;
+import com.deorabanna1925.youtubeplayer.databinding.*;
 
 public class SplashActivity extends AppCompatActivity {
 

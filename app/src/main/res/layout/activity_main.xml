@@ -21,11 +21,49 @@
             app:cardCornerRadius="8dp"
             app:cardElevation="8dp">
 
-            <ImageView
-                android:id="@+id/youtube_thumbnail_image"
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@android:color/transparent" />
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/youtube_thumbnail_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:foreground="@drawable/transparent_gradient_background" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        tools:text="Title" />
+
+                    <TextView
+                        android:id="@+id/author"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:textStyle="normal"
+                        tools:text="Author" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
 
         </androidx.cardview.widget.CardView>
 

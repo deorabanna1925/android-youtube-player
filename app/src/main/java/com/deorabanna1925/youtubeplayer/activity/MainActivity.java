@@ -5,12 +5,23 @@ import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
+import android.widget.RadioButton;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
 import com.bumptech.glide.Glide;
-import com.deorabanna1925.youtubeplayer.databinding.ActivityMainBinding;
+import com.deorabanna1925.youtubeplayer.R;
+import com.deorabanna1925.youtubeplayer.databinding.*;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -46,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
                         String lowResImage = YOUTUBE_THUMBNAIL_PREFIX + videoId + YOUTUBE_THUMBNAIL_LOW_RES_SUFFIX;
                         String highResImage = YOUTUBE_THUMBNAIL_PREFIX + videoId + YOUTUBE_THUMBNAIL_HIGH_RES_SUFFIX;
                         loadVideoThumbnail(lowResImage, highResImage);
+                        loadData(s.toString());
                     }
                 } else {
                     binding.playVideo.setVisibility(View.GONE);
@@ -66,6 +78,7 @@ public class MainActivity extends AppCompatActivity {
                 String lowResImage = YOUTUBE_THUMBNAIL_PREFIX + videoId + YOUTUBE_THUMBNAIL_LOW_RES_SUFFIX;
                 String highResImage = YOUTUBE_THUMBNAIL_PREFIX + videoId + YOUTUBE_THUMBNAIL_HIGH_RES_SUFFIX;
                 loadVideoThumbnail(lowResImage, highResImage);
+                loadData(url);
             }
         }
 
@@ -93,12 +106,35 @@ public class MainActivity extends AppCompatActivity {
             binding.editText.setError("Required");
             return;
         }
+
         String urlStr = binding.editText.getText().toString();
         if (checkIfUrlIsYoutubeUrl(urlStr)) {
             startNewActivity();
         } else {
             Toast.makeText(this, "This is not Youtube Url", Toast.LENGTH_SHORT).show();
         }
+
+    }
+
+    private void loadData(String videoUrl) {
+        String url = "https://noembed.com/embed?url=" + videoUrl;
+        final RequestQueue queue = Volley.newRequestQueue(getApplicationContext());
+        queue.getCache().clear();
+        StringRequest request = new StringRequest(Request.Method.GET, url, response -> {
+            try {
+                JSONObject jsonObject = new JSONObject(response);
+                if(jsonObject != null){
+                    String title = jsonObject.getString("title");
+                    String author = jsonObject.getString("author_name");
+                    binding.title.setText(title);
+                    binding.author.setText(author);
+                }
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        }, error -> {
+        });
+        queue.add(request);
     }
 
     private boolean checkIfUrlIsYoutubeUrl(String url) {
@@ -110,22 +146,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void startNewActivity() {
-        Toast.makeText(this, "Launch", Toast.LENGTH_SHORT).show();
-/*
-        new AlertDialog.Builder(this)
-                .setTitle("Choose Activity")
-                .setMessage("Choose the Activity to Play YouTube Video :")
-                .setPositiveButton("Deora Youtube Activity", (dialog, which) -> {
-                    Intent intent = new Intent(MainActivity.this, DeoraYoutubeActivity.class);
-                    intent.putExtra("video_url", binding.editText.getText().toString());
-                    startActivity(intent);
-                })
-                .setNegativeButton("YouTube API Activity ",(dialog, which) -> {
-                    Intent intent = new Intent(MainActivity.this, YoutubeApiActivity.class);
-                    intent.putExtra("video_id", getVideoIdFromVideoUrl(binding.editText.getText().toString()));
-                    startActivity(intent);
-                })
-                .setNeutralButton("Cancel", null)
-                .show();*/
+        Intent intent = new Intent(MainActivity.this, DeoraYoutubeActivity.class);
+        intent.putExtra("video_url", binding.editText.getText().toString());
+        startActivity(intent);
     }
 }
