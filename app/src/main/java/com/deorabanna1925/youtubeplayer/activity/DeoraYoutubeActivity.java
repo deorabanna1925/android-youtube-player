@@ -2,9 +2,12 @@ package com.deorabanna1925.youtubeplayer.activity;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.app.PictureInPictureParams;
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.pm.PackageManager;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.SparseArray;
 import android.view.View;
@@ -612,4 +615,44 @@ public class DeoraYoutubeActivity extends AppCompatActivity {
                 | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION);
     }
 
+    @Override
+    public void onBackPressed() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N && getPackageManager().hasSystemFeature(PackageManager.FEATURE_PICTURE_IN_PICTURE)) {
+            enterPIPMode();
+        } else {
+            super.onBackPressed();
+        }
+    }
+
+    private void enterPIPMode() {
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N
+                && getPackageManager().hasSystemFeature(
+                PackageManager.FEATURE_PICTURE_IN_PICTURE)) {
+            playbackPosition = player.getCurrentPosition();
+            binding.playerView.setUseController(false);
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                PictureInPictureParams.Builder params = new PictureInPictureParams.Builder();
+                this.enterPictureInPictureMode(params.build());
+            } else {
+                this.enterPictureInPictureMode();
+            }
+
+        }
+    }
+
+    @Override
+    protected void onUserLeaveHint() {
+        super.onUserLeaveHint();
+        enterPIPMode();
+    }
+
+    @Override
+    public void onPictureInPictureModeChanged(boolean isInPictureInPictureMode) {
+        if (!isInPictureInPictureMode) {
+            playbackPosition = player.getCurrentPosition();
+            binding.playerView.setUseController(true);
+        }
+        super.onPictureInPictureModeChanged(isInPictureInPictureMode);
+    }
 }
