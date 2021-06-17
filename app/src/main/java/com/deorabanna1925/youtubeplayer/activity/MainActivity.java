@@ -104,9 +104,9 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
 
-        String urlStr = binding.editText.getText().toString();
+        String urlStr = binding.editText.getText().toString().trim();
         if (checkIfUrlIsYoutubeUrl(urlStr)) {
-            startNewActivity();
+            startNewActivity(urlStr);
         } else {
             Toast.makeText(this, "This is not Youtube Url", Toast.LENGTH_SHORT).show();
         }
@@ -120,7 +120,7 @@ public class MainActivity extends AppCompatActivity {
         StringRequest request = new StringRequest(Request.Method.GET, url, response -> {
             try {
                 JSONObject jsonObject = new JSONObject(response);
-                if(jsonObject != null){
+                if (jsonObject != null) {
                     String title = jsonObject.getString("title");
                     String author = jsonObject.getString("author_name");
                     binding.title.setText(title);
@@ -142,9 +142,9 @@ public class MainActivity extends AppCompatActivity {
         return matcher.matches();
     }
 
-    private void startNewActivity() {
+    private void startNewActivity(String url) {
         Intent intent = new Intent(MainActivity.this, DeoraYoutubeActivity.class);
-        intent.putExtra("video_url", binding.editText.getText().toString());
+        intent.putExtra("video_url", url);
         startActivity(intent);
     }
 }

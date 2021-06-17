@@ -23,9 +23,9 @@
         android:id="@+id/bottom_sheet_playback_speed"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:behavior_hideable="true"
-        android:paddingTop="100dp"
         android:clipToPadding="false"
+        android:paddingTop="100dp"
+        app:behavior_hideable="true"
         app:behavior_peekHeight="0dp"
         app:layout_behavior="@string/bottom_sheet_behavior">
 
@@ -39,9 +39,9 @@
         android:id="@+id/bottom_sheet_playback_quality"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:behavior_hideable="true"
-        android:paddingTop="100dp"
         android:clipToPadding="false"
+        android:paddingTop="100dp"
+        app:behavior_hideable="true"
         app:behavior_peekHeight="0dp"
         app:layout_behavior="@string/bottom_sheet_behavior">
 
@@ -55,9 +55,9 @@
         android:id="@+id/bottom_sheet_playback_resize"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:behavior_hideable="true"
-        android:paddingTop="100dp"
         android:clipToPadding="false"
+        android:paddingTop="100dp"
+        app:behavior_hideable="true"
         app:behavior_peekHeight="0dp"
         app:layout_behavior="@string/bottom_sheet_behavior">
 
@@ -71,9 +71,9 @@
         android:id="@+id/bottom_sheet_all_notes"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:behavior_hideable="true"
-        android:paddingTop="100dp"
         android:clipToPadding="false"
+        android:paddingTop="100dp"
+        app:behavior_hideable="true"
         app:behavior_peekHeight="0dp"
         app:layout_behavior="@string/bottom_sheet_behavior">
 
@@ -87,9 +87,9 @@
         android:id="@+id/bottom_sheet_all_comments"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:behavior_hideable="true"
-        android:paddingTop="100dp"
         android:clipToPadding="false"
+        android:paddingTop="100dp"
+        app:behavior_hideable="true"
         app:behavior_peekHeight="0dp"
         app:layout_behavior="@string/bottom_sheet_behavior">
 
