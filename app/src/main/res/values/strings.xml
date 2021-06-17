@@ -2,4 +2,9 @@
     <string name="app_name">YouTube Player</string>
     <string name="youtube_url">Youtube Url</string>
     <string name="open_video">Play</string>
+    <string name="fill">Fill</string>
+    <string name="fit">Fit</string>
+    <string name="zoom">Zoom</string>
+    <string name="fixHeight">Fix Height</string>
+    <string name="fixWidth">Fix Width</string>
 </resources>

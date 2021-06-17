@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="#e6e6e6"
-    android:paddingBottom="16dp">
+    android:paddingBottom="56dp">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -27,7 +27,7 @@
                 android:textStyle="bold" />
 
             <ImageView
-                android:id="@+id/close_bottom_sheet3"
+                android:id="@+id/close"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
@@ -44,7 +44,7 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/playback_resize_fill"
+                android:id="@+id/fill"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="?attr/selectableItemBackground"
@@ -60,7 +60,7 @@
                 android:background="#e6e6e6" />
 
             <TextView
-                android:id="@+id/playback_resize_fit"
+                android:id="@+id/fit"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="?attr/selectableItemBackground"
@@ -76,7 +76,7 @@
                 android:background="#e6e6e6" />
 
             <TextView
-                android:id="@+id/playback_resize_zoom"
+                android:id="@+id/zoom"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="?attr/selectableItemBackground"
@@ -92,7 +92,7 @@
                 android:background="#e6e6e6" />
 
             <TextView
-                android:id="@+id/playback_resize_fix_height"
+                android:id="@+id/fix_height"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="?attr/selectableItemBackground"
@@ -108,7 +108,7 @@
                 android:background="#e6e6e6" />
 
             <TextView
-                android:id="@+id/playback_resize_fix_width"
+                android:id="@+id/fix_width"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="?attr/selectableItemBackground"

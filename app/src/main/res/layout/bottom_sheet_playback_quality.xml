@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="#e6e6e6"
-    android:paddingBottom="16dp">
+    android:paddingBottom="56dp">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -28,7 +28,7 @@
 
             <ImageView
                 android:background="?attr/selectableItemBackground"
-                android:id="@+id/close_bottom_sheet2"
+                android:id="@+id/close"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
@@ -44,7 +44,7 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/playback_quality_2160"
+                android:id="@+id/quality_2160"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="10dp"
@@ -60,7 +60,7 @@
                 android:background="#e6e6e6" />
 
             <TextView
-                android:id="@+id/playback_quality_1440"
+                android:id="@+id/quality_1440"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="10dp"
@@ -76,7 +76,7 @@
                 android:background="#e6e6e6" />
 
             <TextView
-                android:id="@+id/playback_quality_1080"
+                android:id="@+id/quality_1080"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="10dp"
@@ -92,7 +92,7 @@
                 android:background="#e6e6e6" />
 
             <TextView
-                android:id="@+id/playback_quality_720"
+                android:id="@+id/quality_720"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="10dp"
@@ -108,7 +108,7 @@
                 android:background="#e6e6e6" />
 
             <TextView
-                android:id="@+id/playback_quality_480"
+                android:id="@+id/quality_480"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="10dp"
@@ -124,7 +124,7 @@
                 android:background="#e6e6e6" />
 
             <TextView
-                android:id="@+id/playback_quality_360"
+                android:id="@+id/quality_360"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="10dp"
@@ -140,7 +140,7 @@
                 android:background="#e6e6e6" />
 
             <TextView
-                android:id="@+id/playback_quality_240"
+                android:id="@+id/quality_240"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="10dp"
@@ -156,7 +156,7 @@
                 android:background="#e6e6e6" />
 
             <TextView
-                android:id="@+id/playback_quality_144"
+                android:id="@+id/quality_144"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="10dp"

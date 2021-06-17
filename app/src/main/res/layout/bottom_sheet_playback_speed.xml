@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="#e6e6e6"
-    android:paddingBottom="16dp">
+    android:paddingBottom="56dp">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -28,7 +28,7 @@
 
             <ImageView
                 android:background="?attr/selectableItemBackground"
-                android:id="@+id/close_bottom_sheet"
+                android:id="@+id/close"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"

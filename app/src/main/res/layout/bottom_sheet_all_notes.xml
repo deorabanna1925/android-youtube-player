@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="#e6e6e6"
-    android:paddingBottom="16dp">
+    android:paddingBottom="56dp">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -28,7 +28,7 @@
                 android:textStyle="bold" />
 
             <ImageView
-                android:id="@+id/close_bottom_sheet4"
+                android:id="@+id/close"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
@@ -51,7 +51,7 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/player_notes_current_time"
+                    android:id="@+id/time"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="?attr/selectableItemBackground"
@@ -66,7 +66,7 @@
                     tools:text="00:00" />
 
                 <EditText
-                    android:id="@+id/player_notes_current_text"
+                    android:id="@+id/text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@android:color/transparent"
@@ -84,7 +84,7 @@
             </LinearLayout>
 
             <ImageButton
-                android:id="@+id/player_notes_current_button"
+                android:id="@+id/add"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_margin="5dp"
@@ -96,7 +96,7 @@
         </LinearLayout>
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recycler_view_notes"
+            android:id="@+id/recycler_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             tools:itemCount="5"

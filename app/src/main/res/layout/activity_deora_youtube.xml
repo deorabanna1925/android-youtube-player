@@ -29,7 +29,9 @@
         app:behavior_peekHeight="0dp"
         app:layout_behavior="@string/bottom_sheet_behavior">
 
-        <include layout="@layout/bottom_sheet_playback_speed" />
+        <include
+            android:id="@+id/playback_speed_layout"
+            layout="@layout/bottom_sheet_playback_speed" />
 
     </androidx.core.widget.NestedScrollView>
 
@@ -43,7 +45,9 @@
         app:behavior_peekHeight="0dp"
         app:layout_behavior="@string/bottom_sheet_behavior">
 
-        <include layout="@layout/bottom_sheet_playback_quality" />
+        <include
+            android:id="@+id/playback_quality_layout"
+            layout="@layout/bottom_sheet_playback_quality" />
 
     </androidx.core.widget.NestedScrollView>
 
@@ -57,7 +61,9 @@
         app:behavior_peekHeight="0dp"
         app:layout_behavior="@string/bottom_sheet_behavior">
 
-        <include layout="@layout/bottom_sheet_playback_resize" />
+        <include
+            android:id="@+id/playback_resize_layout"
+            layout="@layout/bottom_sheet_playback_resize" />
 
     </androidx.core.widget.NestedScrollView>
 
@@ -71,7 +77,9 @@
         app:behavior_peekHeight="0dp"
         app:layout_behavior="@string/bottom_sheet_behavior">
 
-        <include layout="@layout/bottom_sheet_all_notes" />
+        <include
+            android:id="@+id/all_notes_layout"
+            layout="@layout/bottom_sheet_all_notes" />
 
     </androidx.core.widget.NestedScrollView>
 
@@ -85,7 +93,9 @@
         app:behavior_peekHeight="0dp"
         app:layout_behavior="@string/bottom_sheet_behavior">
 
-        <include layout="@layout/bottom_sheet_all_comments" />
+        <include
+            android:id="@+id/all_comments_layout"
+            layout="@layout/bottom_sheet_all_comments" />
 
     </androidx.core.widget.NestedScrollView>
 
