@@ -24,7 +24,7 @@ import java.util.ArrayList;
 public class CommentsAdapter extends RecyclerView.Adapter<CommentsAdapter.ViewHolder> {
 
     private Context context;
-    private ArrayList<Comments> arrayList = new ArrayList<>();
+    private ArrayList<Comments> arrayList;
 
     public CommentsAdapter(Context context, ArrayList<Comments> arrayList) {
         this.context = context;

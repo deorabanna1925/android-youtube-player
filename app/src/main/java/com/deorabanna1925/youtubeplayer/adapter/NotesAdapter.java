@@ -21,7 +21,7 @@ public class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.ViewHolder> 
     private SimpleExoPlayer player;
     private BottomSheetBehavior bottomSheetBehavior;
     private Context context;
-    private ArrayList<Notes> arrayList = new ArrayList<>();
+    private ArrayList<Notes> arrayList;
 
     public NotesAdapter(Context context, SimpleExoPlayer player, BottomSheetBehavior bottomSheetBehavior4, ArrayList<Notes> arrayList) {
         this.context = context;
