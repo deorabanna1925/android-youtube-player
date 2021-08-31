@@ -15,6 +15,7 @@
         <activity
             android:supportsPictureInPicture="true"
             android:name=".activity.DeoraYoutubeActivity"
+            android:launchMode="singleTask"
             android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
             tools:targetApi="n" />
         <activity

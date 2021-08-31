@@ -633,6 +633,8 @@ public class DeoraYoutubeActivity extends AppCompatActivity {
             binding.playerView.setUseController(false);
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
                 PictureInPictureParams.Builder params = new PictureInPictureParams.Builder();
+//                Rational aspectRatio = new Rational(binding.playerView.getWidth(), binding.playerView.getHeight());
+//                params.setAspectRatio(aspectRatio);
                 this.enterPictureInPictureMode(params.build());
             } else {
                 this.enterPictureInPictureMode();
@@ -650,7 +652,7 @@ public class DeoraYoutubeActivity extends AppCompatActivity {
     @Override
     public void onPictureInPictureModeChanged(boolean isInPictureInPictureMode) {
         if (!isInPictureInPictureMode) {
-            playbackPosition = player.getCurrentPosition();
+//            playbackPosition = player.getCurrentPosition();
             binding.playerView.setUseController(true);
         }
         super.onPictureInPictureModeChanged(isInPictureInPictureMode);
